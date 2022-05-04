@@ -1,4 +1,4 @@
-package ru.udemy.composition.presentation
+package ru.udemy.composition.presentation.game
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import ru.udemy.composition.databinding.FragmentGameBinding
 import ru.udemy.composition.domain.entity.GameResult
 import ru.udemy.composition.domain.entity.GameSettings
 import ru.udemy.composition.domain.entity.Level
+import ru.udemy.composition.presentation.gamefinished.GameFinishedFragment
 
 class GameFragment : Fragment() {
 

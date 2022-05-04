@@ -1,4 +1,4 @@
-package ru.udemy.composition.presentation
+package ru.udemy.composition.presentation.welcome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.udemy.composition.R
 import ru.udemy.composition.databinding.FragmentWelcomeBinding
+import ru.udemy.composition.presentation.chooselevel.ChooseLevelFragment
 
 class WelcomeFragment : Fragment() {
 
