@@ -1,4 +1,4 @@
-package ru.udemy.composition.presentation
+package ru.udemy.composition.presentation.gamefinished
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import ru.udemy.composition.databinding.FragmentGameFinishedBinding
 import ru.udemy.composition.domain.entity.GameResult
+import ru.udemy.composition.presentation.game.GameFragment
 
 class GameFinishedFragment : Fragment() {
 

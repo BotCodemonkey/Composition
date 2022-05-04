@@ -1,4 +1,4 @@
-package ru.udemy.composition.presentation
+package ru.udemy.composition.presentation.chooselevel
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import ru.udemy.composition.R
 import ru.udemy.composition.databinding.FragmentChooseLevelBinding
 import ru.udemy.composition.domain.entity.Level
+import ru.udemy.composition.presentation.game.GameFragment
 
 class ChooseLevelFragment : Fragment() {
 
