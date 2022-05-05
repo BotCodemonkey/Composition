@@ -14,6 +14,7 @@ import ru.udemy.composition.databinding.FragmentGameBinding
 import ru.udemy.composition.domain.entity.GameResult
 import ru.udemy.composition.domain.entity.Level
 import ru.udemy.composition.presentation.gamefinished.GameFinishedFragment
+import ru.udemy.composition.presentation.viewmodelfactory.GameViewModelFactory
 
 class GameFragment : Fragment() {
 
@@ -22,10 +23,14 @@ class GameFragment : Fragment() {
 
     private lateinit var level: Level
 
+    private val viewModelFactory: GameViewModelFactory by lazy {
+        GameViewModelFactory(level, requireActivity().application)
+    }
+
     private val viewModel: GameViewModel by lazy {
         ViewModelProvider(
             this,
-            ViewModelProvider.AndroidViewModelFactory.getInstance(requireActivity().application)
+            viewModelFactory
         )[GameViewModel::class.java]
     }
 
@@ -64,8 +69,6 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         observeViewModel()
         setClickListenersToOptions()
-        viewModel.starGame(level)
-
     }
 
     override fun onCreateView(
@@ -78,7 +81,7 @@ class GameFragment : Fragment() {
     }
 
     private fun setClickListenersToOptions() {
-        for(tvOption in tvOptions) {
+        for (tvOption in tvOptions) {
             tvOption.setOnClickListener {
                 viewModel.chooseAnswer(tvOption.text.toString().toInt())
             }
